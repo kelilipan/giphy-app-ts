@@ -9,7 +9,7 @@ interface SearchBoxProps {
 const SearchBox = ({ handleSubmit, handleChange, query }:SearchBoxProps)  => {
   return (
     <form onSubmit={handleSubmit}>
-      <input name="query" value={query} onChange={handleChange} />
+      <input name="query" data-testid='search-box' value={query} onChange={handleChange} />
       <button type="submit">Search</button>
     </form>
   );

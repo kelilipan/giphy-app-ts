@@ -15,8 +15,8 @@ const routeList = [
 const Routes = () => {
   return (
     <Switch>
-      {routeList.map(({ component, ...rest }) => (
-        <Route {...rest}>{component}</Route>
+      {routeList.map(({ component, ...rest }, idx) => (
+        <Route key={idx} {...rest}>{component}</Route>
       ))}
     </Switch>
   );
